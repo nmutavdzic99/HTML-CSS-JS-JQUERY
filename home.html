@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Odgajivačnica</title>
+    <link rel="icon" href="images/icon.jpg" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>     
+</head>
+<body>
+        <div class="nav">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle"/>
+            <div class="menu">
+                <a href="#" class="active">Početna!</a>
+                <a href="aboutUs.html">O nama!</a>
+                <a href="ourDogs.html">Naši psi!</a>
+                <a href="writeUs.html">Pišite nam!</a>
+            </div>
+        </div>
+        <div class="backgroundImage">
+            <a href="#sec1">
+                <img src="images/arrowDown.png" height="50px" width="70px" style="padding: 1%">
+            </a>
+        </div>
+    <section id="sec1">
+        <div class="headline">
+            <div class="headline-text">
+                <div class="headline-text-item">
+                        <h3><div id="changeText" style="font-weight: bold">Odgajivačnica EPOS</div></h3>
+                        <br>
+                        Dobrodošli na web prezentaciju odgajivačnice EPOS!
+                        <br>
+                        <br>
+                        <div class="slideshow-container">
+
+                                <div class="mySlides fade">
+                                  <div class="numbertext">1 / 3</div>
+                                  <img src="images/image1.jpg" style="width:100%">
+                                  <div class="text">3 meseca</div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <div class="numbertext">2 / 3</div>
+                                  <img src="images/image2.jpg" style="width:100%">
+                                  <div class="text">6 meseci</div>
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <div class="numbertext">3 / 3</div>
+                                  <img src="images/image3.jpg" style="width:100%">
+                                  <div class="text">12 meseci</div>
+                                </div>
+                                
+                                </div>
+                                <br>
+                                
+                                <div style="text-align:center">
+                                  <span class="dot"></span> 
+                                  <span class="dot"></span> 
+                                  <span class="dot"></span> 
+                                </div>
+                        <br>
+                        Posetite nas na sledećoj lokaciji:
+                        <br>
+                        <br>
+                        <iframe class="google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.3995876675363!2d20.47303891553442!3d44.7726583790989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a70576248bf79%3A0xadaf5cff042d3bd0!2z0KTQsNC60YPQu9GC0LXRgiDQvtGA0LPQsNC90LjQt9Cw0YbQuNC-0L3QuNGFINC90LDRg9C60LAg0KPQvdC40LLQtdGA0LfQuNGC0LXRgtCwINGDINCR0LXQvtCz0YDQsNC00YM!5e0!3m2!1ssr!2srs!4v1607875797914!5m2!1ssr!2srs" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="#">
+        <img src="images/arrowUp.png" height="50px" width="70px" style="padding: 1%" id="topFunction()" onclick="javascript:topFunction()">
+    </a>
+    </body>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+
+    /*function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    function blink() {
+        document.getElementById("changeText").style.color = "#000000";
+		setTimeout("appear()", 700);
+	}
+
+    function appear() {
+        document.getElementById("changeText").style.color = "rgb(218, 218, 184)";
+		setTimeout("blink()", 700);
+    }
+    window.onload = function () {
+        blink();
+    }
+    $(document).ready(function () {
+    // Handler for .ready() called.
+    $('html, body').animate({
+        scrollTop: $('#sec1').offset().top
+    }, 'slow');
+});*/
+</script>
+</html>

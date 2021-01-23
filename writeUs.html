@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Odgajivačnica</title>
+    <link rel="icon" href="images/icon.jpg" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js" type="text/javascript"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+        <div class="menu">
+            <a href="home.html">Početna!</a>
+            <a href="aboutUs.html">O nama!</a>
+            <a href="ourDogs.html">Naši psi!</a>
+            <a href="#" class="active">Pišite nam!</a>
+        </div>
+    </div>
+    <div class="backgroundImage">
+        <a href="#sec1">
+            <img src="images/arrowDown.png" height="50px" width="70px" style="padding: 1%">
+        </a>
+    </div>
+    <section id="sec1">
+        <div class="headline">
+                <form id="form">
+                        <div class="contactForm">
+                            <div class="item" style="font-size: 20px">
+                                <br>
+                                <input type="text" id="name" name="ime" required placeholder="Unesite Vaše ime ...">
+                                <br>
+                                <input type="text" id="adress" name="adresa" required placeholder="Unesite Vaš e-mail ...">
+                                <br>
+                                <input type="text" id="tel" name="tel" pattern="[0-9]+" required placeholder="Unesite Vaš broj telefona ...">
+                                <br>
+                                <textarea cols="20" rows="20" id="message" name="poruka" required placeholder="Pišite nam ..."></textarea>
+                                <br>
+                                <button style="width: 100px;" class="button" type="submit">Pošalji!</button>
+                            </div>
+                        </div>
+                    </form>
+        </div>
+    </section>
+    <a href="#">
+        <img src="images/arrowUp.png" height="50px" width="70px" style="padding: 1%" id="topFunction()" onclick="javascript:topFunction()">
+    </a>
+</body>
+<script type="text/javascript">
+   /*function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+    $.validator.addMethod("regex",
+        function (value, element, regexp) {
+            var re = new RegExp(regexp);
+            return this.optional(element) || re.test(value);
+        }, "Molimo Vas unesite validan broj telefona!"
+    );
+    $('#form').validate({
+        rules: {
+            ime: {
+                required: true,
+                minlength: 3
+            },
+            adresa: {
+                required: true,
+                email: true
+            },
+            tel: {
+                required: true,
+                regex: "[0-9]" // As RegExp 		
+            }
+        },
+        messages: {
+            ime: {
+                required: "Unesite Vaše ime!",
+                minlength: "Ime mora imati minimum 3 karaktera!"
+            },
+            adresa: {
+                required: "Unesite Vaš e-mail!",
+                email: "E-mail mora biti validan!"
+            },
+            tel: {
+                 required: "Unesite Vaš broj telefona!",
+            }
+        }
+    });
+    $(document).ready(function () {
+    // Handler for .ready() called.
+    $('html, body').animate({
+        scrollTop: $('#sec1').offset().top
+    }, 'slow');
+});*/
+</script>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Odgajivačnica</title>
+    <link rel="icon" href="images/icon.jpg" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+        <div class="menu">
+            <a href="home.html">Početna!</a>
+            <a href="#" class="active">O nama!</a>
+            <a href="ourDogs.html">Naši psi!</a>
+            <a href="writeUs.html">Pišite nam!</a>
+        </div>
+    </div>
+    <div class="backgroundImage">
+        <a href="#sec1">
+            <img src="images/arrowDown.png" height="50px" width="70px" style="padding: 1%">
+        </a>
+    </div>
+    
+    <section id="sec1">
+        <div class="headline">
+                <div class="main-content">
+                        <div class="main">
+                                <br>
+                                <br>
+                                <br>
+                                <button class="collapsible" style="background: transparent; color: #000000; padding: 2% 30%">Ko smo mi?</button>
+                                <div class="content" style="background: transparent; padding: 0 30%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <br>
+                                <button class="collapsible" style="background: transparent; color: #000000; padding: 2% 30%">Čime se bavimo?</button>
+                                <div class="content" style="background: transparent; padding: 0 30%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <br>
+                                <button class="collapsible" style="background: transparent; color: #000000; padding: 2% 30%">Gde se nalazimo?</button>
+                                <div class="content" style="background: transparent; padding: 0 30%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <br>
+                                <button class="collapsible" style="background: transparent; color: #000000; padding: 2% 30%">Naše radno vreme?</button>
+                                <div class="content" style="background: transparent; padding: 0 30%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                <br>
+                                <button class="collapsible" style="background: transparent; color: #000000; padding: 2% 30%">Cena?</button>
+                                <div class="content" style="background: transparent; padding: 0 30%">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                                
+                        </div>
+                    </div>
+        </div>
+    </section>
+    <a href="#">
+        <img src="images/arrowUp.png" height="50px" width="70px" style="padding: 1%" id="topFunction()" onclick="javascript:topFunction()">
+    </a>
+</body>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+        content.style.maxHeight = null;
+        } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        } 
+    });
+    }
+        /*function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        $(document).ready(function () {
+        // Handler for .ready() called.
+        $('html, body').animate({
+            scrollTop: $('#sec1').offset().top
+        }, 'slow');
+    });*/
+</script>
+</html>
